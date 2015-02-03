@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta name="MobileOptimized" content="320">
+  <title></title>
+  <style>
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      background: greenyellow;
+    }
+    nav{height: 50px;background: yellow;}
+    nav>a{display: block;float:left;width: 100px;height: 50px;text-align: center;}
+    nav>a.active{border-bottom: solid 3px red;}
+    span{position: relative;display: block;margin-top:200px;width:100%;background: yellow;}
+  </style>
+  <script src="jq.js"></script>
+  <script src="jqSwipe.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="active">111</a>
+      <a>222</a>
+      <a>333</a>
+      <a>444</a>
+      <a>555</a>
+      <a>666</a>
+      <a>777</a>
+    </nav>
+  </header>
+  <span>ok</span>
+  <script>
+    $("nav").jqSwipe({classname:"active"});
+  </script>
+</body>
+</html>
