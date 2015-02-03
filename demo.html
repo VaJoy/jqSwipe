@@ -18,7 +18,6 @@
     nav{height: 50px;background: yellow;}
     nav>a{display: block;float:left;width: 100px;height: 50px;text-align: center;}
     nav>a.active{border-bottom: solid 3px red;}
-    span{position: relative;display: block;margin-top:200px;width:100%;background: yellow;}
   </style>
   <script src="jq.js"></script>
   <script src="jqSwipe.js"></script>
@@ -35,9 +34,9 @@
       <a>777</a>
     </nav>
   </header>
-  <span>ok</span>
+
   <script>
-    $("nav").jqSwipe({classname:"active"});
+    $("nav").jqSwipe("active");
   </script>
 </body>
 </html>

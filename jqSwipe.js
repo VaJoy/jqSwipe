@@ -5,7 +5,7 @@
  */
 
 (function ($, window, undefined) {
-    $.fn.jqSwipe = function (option) {
+    $.fn.jqSwipe = function (classname) {
         var $binder = $(this),
             binder = $(this).get(0),
             $children = $binder.children(),
@@ -25,12 +25,8 @@
             transform = prefix + "transform",
             vp_width = prefix==="-moz-" ? screen.width : window.innerWidth; //视区宽度hack
 
-        option = option || {};
-        option = $.extend({
-            classname:null
-        },option);
+        classname = classname || null;
         initSwipe();
-        $("span").text(vp_width);
 
         /**
          * 初始化UI
@@ -63,8 +59,8 @@
                 var $item = $(e.target),
                     index = $item.index(),
                     transl_x_temp = 0;
-                if(option.classname){
-                    $item.addClass(option.classname).siblings().removeClass(option.classname);
+                if(classname){
+                    $item.addClass(classname).siblings().removeClass(classname);
                 }
                 if( (index-1) * itemWidth < -transl_x ){
                     if(index>0) transl_x_temp = - (index-1) * itemWidth;
